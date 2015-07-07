@@ -1,0 +1,43 @@
+:root {
+	--eggsred: #e04e39;
+	--eggsblue: #7fc4d9;
+	--swatch1: black;
+	--swatch2: white;
+}
+
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+@-webkit-keyframes egg-animation-with-a-really-long-name-that-will-be-obscurified-by-cssnano {
+	from {}
+
+	to {
+		-webkit-transform: rotate(720deg);
+		margin-left: 100%;
+	}
+}
+
+body{
+	background: var(--swatch2);
+	text-align: center;
+	overflow: hidden;
+	padding: 0;
+}
+
+.egg{
+	position: absolute;
+	bottom: 10px;
+	width: 126px;
+	height: 60px;
+	padding-top: 120px;
+	margin: 0 0 0 -200px;
+	border-radius: 63px 63px 63px 63px/108px 108px 72px 72px;
+	background: radial-gradient(75% 100% at 63px 15px, #f7f7f2 0%, #eaeae3 30%, #b1ac9d 100%);
+	box-shadow: 0 3px 5px -4px rgba(40, 40, 40, 0.8);
+	animation: egg-animation-with-a-really-long-name-that-will-be-obscurified-by-cssnano 10s linear 0s infinite alternate;
+}
+
+:--heading {
+	font-family: helvetica, sans-serif;
+	font-size: 40px;
+	display: inline-block;
+  }
