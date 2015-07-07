@@ -18,12 +18,10 @@ module.exports = function(grunt) {
 		postcss: {
 			options: {
 				map: true,
- 
+				browsers: 'last 2 versions',
+
 				processors: [
 					require('cssnext')(),
-					require('autoprefixer-core')({
-						browsers: 'last 2 versions'
-					}),
 					require('cssnano')({
 						dist: {
 							files: {
@@ -75,8 +73,8 @@ module.exports = function(grunt) {
 
 	require("load-grunt-tasks")(grunt);
 
-	grunt.registerTask("dev", [
-		"watch"
-	]);
+	grunt.registerTask("dev", "watch");
+
+	grunt.registerTask("default", ["postcss", "concat", "copy"]);
 
 };
