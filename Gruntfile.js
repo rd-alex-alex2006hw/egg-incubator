@@ -19,16 +19,11 @@ module.exports = function(grunt) {
 			options: {
 				map: true,
 				browsers: 'last 2 versions',
+				compress: true,
 
 				processors: [
 					require('cssnext')(),
-					require('cssnano')({
-						dist: {
-							files: {
-								'dist/style/css/nanofied.css': 'dist/style/css/main.css'
-							}
-						}
-					})
+					require('cssnano')()
 				]
 			},
 
