@@ -3,5 +3,4 @@ node_modules/
 .idea/
 src/style/css/*.*
 bower_components/
-
-src/style/css
+dist/

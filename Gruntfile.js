@@ -18,32 +18,57 @@ module.exports = function(grunt) {
 		postcss: {
 			options: {
 				map: true, // inline sourcemaps
-
+ 
 				processors: [
-					require('autoprefixer-core')({browsers: 'last 2 versions'}), // add vendor prefixes
-					require('cssnano')() // minify the result
+					require('cssnext')(),
+					require('autoprefixer-core')({
+						browsers: 'last 2 versions'
+					}),
+					require('cssnano')({
+						dist: {
+							files: {
+								'dist/style/css/nanofied.css': 'src/style/css/main.css'
+							}
+						}
+					})
 				]
 			},
+
 			dist: {
-				src: 'dist/style/css/*.css'
+				files: [{
+					expand: true,
+					flatten: true,
+					//cwd: 'src/style/css/',
+					src: ['src/**/*.css'],
+					dest: 'dist/style/css/'
+				}]
 			}
 		},
 
-		cssnext: {
-			options: {
-				sourcemap: true
-			},
-			dist: {
-				files: {
-					"dist/style/css/nexified.css": "src/style/css/main.css"
-				}
-			}
-		},
 
 		copy: {
 			main: {
 				src: ['src/index.html'],
+				expand: true,
+				flatten: true,
 				dest: 'dist/'
+			}
+		},
+
+		watch: {
+			css: {
+				files: 'src/style/css/*.css',
+				tasks: ['postcss']
+			},
+
+			scripts: {
+				files: 'src/js/includes/*.js',
+				tasks: 'concat'
+			},
+
+			other: {
+				files: 'src/*.html',
+				tasks: 'copy'
 			}
 		}
 
@@ -51,11 +76,8 @@ module.exports = function(grunt) {
 
 	require("load-grunt-tasks")(grunt);
 
-	grunt.registerTask("watch", [
-		"concat",
-		"cssnext",
-		"postcss",
-		"copy"
+	grunt.registerTask("dev", [
+		"watch"
 	]);
 
 };
