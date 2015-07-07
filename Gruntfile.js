@@ -18,11 +18,16 @@ module.exports = function(grunt) {
 		postcss: {
 			options: {
 				map: true,
-				browsers: 'last 2 versions',
-				compress: true,
 
 				processors: [
-					require('cssnext')(),
+
+					require('cssnext')({
+						options: {
+							browsers: 'last 2 versions',
+							compress: true
+						}
+					}),
+
 					require('cssnano')()
 				]
 			},
@@ -36,6 +41,7 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
+
 
 
 		copy: {
