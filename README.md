@@ -8,7 +8,7 @@ Starter kit for anyone that wants to use the next generation CSS before all brow
 ###Get up and running: 
 1. `$ npm install` - this will install the following packages:
     - [cssnext](https://github.com/cssnext/cssnext) lets you future CSS syntax and compiles it to more compatible CSS. It includes:
-        - [autoprefixer](https://github.com/postcss/autoprefixer-core), to adds vendor prefixer to your CSS
+        - [autoprefixer](https://github.com/postcss/autoprefixer-core) to add vendor prefixer to your CSS
         - [cssnano](https://github.com/ben-eb/cssnano) to minify, optimise and obscurify your CSS
     - [grunt](http://gruntjs.com/) is our chosen task runner
     - [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat) lets us combine the content of files and jam it into one
