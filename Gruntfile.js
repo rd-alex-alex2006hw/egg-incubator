@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 
 		postcss: {
 			options: {
-				map: true, // inline sourcemaps
+				map: true,
  
 				processors: [
 					require('cssnext')(),
@@ -38,7 +38,6 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					flatten: true,
-					//cwd: 'src/style/css/',
 					src: ['src/**/*.css'],
 					dest: 'dist/style/css/'
 				}]
