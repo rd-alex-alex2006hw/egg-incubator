@@ -17,5 +17,5 @@ Starter kit for anyone that wants to use the next generation CSS before all brow
     - [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) makes the Gruntfile.js a lot cleaner. Everything we add to node_modules will be loaded as a task so you don't have to list all of them
 3. `$ grunt watch`
 4. Change something in a CSS,HTML or JS file and let the Grunt tasks create the /dist directory
-5. Open /dist/index.html in a browser. If you see the text "It's working" and a spinning egg at the bottom of the screen you're all set!
+5. Open /dist/index.html in a browser. If you see the text "Congratulations!" and a spinning egg at the bottom of the screen you're all set!
 
