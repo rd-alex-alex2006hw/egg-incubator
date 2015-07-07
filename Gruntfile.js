@@ -20,11 +20,11 @@ module.exports = function(grunt) {
 				map: true,
 
 				processors: [
-
+					require('postcss-nested'),
 					require('cssnext')({
 						browsers: 'last 2 versions',
 						compress: true
-					}),
+					})
 					
 				]
 			},

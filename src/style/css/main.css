@@ -27,9 +27,13 @@ body {
 a {
 	color: var(--eggsred);
 	text-decoration: none;
+
+	&:hover{
+		/*we can now nest in css! how cool is that?*/
+		text-decoration: underline;
+	}
 }
 
-a:hover { text-decoration: underline; }
 
 article{
 	max-width: 600px;
@@ -53,3 +57,4 @@ article{
 	font-size: 40px;
 	display: inline-block;
 }
+
