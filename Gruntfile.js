@@ -22,13 +22,10 @@ module.exports = function(grunt) {
 				processors: [
 
 					require('cssnext')({
-						options: {
-							browsers: 'last 2 versions',
-							compress: true
-						}
+						browsers: 'last 2 versions',
+						compress: true
 					}),
-
-					require('cssnano')()
+					
 				]
 			},
 
