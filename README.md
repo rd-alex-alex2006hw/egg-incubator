@@ -16,7 +16,6 @@ Starter kit for anyone that wants to use the next generation CSS before all brow
     - [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch) is a grunt task for watching files and directories for changes
     - [grunt-postcss](https://github.com/nDmitry/grunt-postcss) is a tool for transforming CSS with JS plugins, such as cssnano and cssnext
     - [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) makes the Gruntfile.js a lot cleaner. Everything we add to node_modules will be loaded as a task so you don't have to list all of them
-3. `$ grunt watch`
-4. Change something in a CSS,HTML or JS file and let the Grunt tasks create the /dist directory
+3. `$ grunt` - this will create a dist/ directory with your processed files from src/ 
+4. `$ grunt watch` - listens to changes to css, js and html files and processes them into dist/
 5. Open /dist/index.html in a browser. If you see the text "Congratulations!" and a spinning egg at the bottom of the screen you're all set!
-
