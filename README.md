@@ -1,4 +1,4 @@
-# egg-incubator
+# Egg Incubator
 Starter kit for anyone that wants to use the next generation CSS before all browsers support it. 
 
 ###Requirements:
