@@ -2,7 +2,8 @@
 Starter kit for anyone that wants to use the next generation CSS before all browsers support it with the power of [postCSS](https://github.com/postcss/postcss "postCSS")
 
 ###Requirements:
-- Node.js
+- [Node.js](https://nodejs.org/)
+- [Node Package Manager (npm)](https://www.npmjs.com/)
 
 ###Get up and running: 
 1. `$ npm install` - this will install the following packages:
