@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 					require('cssnano')({
 						dist: {
 							files: {
-								'dist/style/css/nanofied.css': 'src/style/css/main.css'
+								'dist/style/css/nanofied.css': 'dist/style/css/main.css'
 							}
 						}
 					})
